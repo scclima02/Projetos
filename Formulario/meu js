@@ -1,0 +1,18 @@
+<script type="text/javascript"> 
+const form = document.getElementById('cadastro');
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+
+	const nome = document.getElementById('nome').value;
+	const email = document.getElementById('email').value;
+	const telefone = document.getElementById('telefone').value;
+	const endereco = document.getElementById('endereco').value;
+	const cidade = document.getElementById('cidade').value;
+	const estado = document.getElementById('estado').value;
+
+	// Você pode substituir o console.log com a chamada para uma API ou script PHP que irá manipular os dados salvos
+	console.log(`Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nEndereço: ${endereco}\nCidade: ${cidade}\nEstado: ${estado}`);
+
+	form.reset();
+});

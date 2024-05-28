@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+  background: linear-gradient(to bottom, #0080ff 0%, #66ccff 100%);
+}
+        {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f8f8;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #faf8f8;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f5f5f5;
+}
+
+form select option:first-child {
+	color: #bbb;
+}
+
+form button[type="submit"] {
+	display: block;
+	background-color: #008800;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	width: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+        
+
+    </style>
+    <script type="text/javascript">
+        const form = document.getElementById('cadastro');
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+
+	const nome = document.getElementById('nome').value;
+	const email = document.getElementById('email').value;
+	const telefone = document.getElementById('telefone').value;
+	const endereco = document.getElementById('endereco').value;
+	const cidade = document.getElementById('cidade').value;
+	const estado = document.getElementById('estado').value;
+
+	// Você pode substituir o console.log com a chamada para uma API ou script PHP que irá manipular os dados salvos
+	console.log(`Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nEndereço: ${endereco}\nCidade: ${cidade}\nEstado: ${estado}`);
+
+	form.reset();
+});
+    </script>
+	<title>Formulário de Cadastro de Clientes</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>Formulário de Cadastro de Clientes</h1>
+		<form id="cadastro" method="POST">
+			<label for="nome">Nome Completo:</label>
+			<input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+			<label for="telefone">Telefone:</label>
+			<input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+			<label for="endereco">Endereço:</label>
+			<input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+			<label for="cidade">Cidade:</label>
+			<input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+			<label for="estado">Estado:</label>
+			<select id="estado" name="estado" required>
+				<option value="">Selecione seu estado</option>
+				<option value="AC">Acre</option>
+				<option value="AL">Alagoas</option>
+				<option value="AP">Amapá</option>
+				<option value="AM">Amazonas</option>
+				<option value="BA">Bahia</option>
+				<option value="CE">Ceará</option>
+				<option value="DF">Distrito Federal</option>
+				<option value="ES">Espírito Santo</option>
+				<option value="GO">Goiás</option>
+				<option value="MA">Maranhão</option>
+				<option value="MT">Mato Grosso</option>
+				<option value="MS">Mato Grosso do Sul</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="PA">Pará</option>
+				<option value="PB">Paraíba</option>
+				<option value="PR">Paraná</option>
+				<option value="PE">Pernambuco</option>
+				<option value="PI">Piauí</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="RN">Rio Grande do Norte</option>
+				<option value="RS">Rio Grande do Sul</option>
+				<option value="RO">Rondônia</option>
+				<option value="RR">Roraima</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="SP">São Paulo</option>
+				<option value="SE">Sergipe</option>
+				<option value="TO">Tocantins</option>
+			</select>
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
